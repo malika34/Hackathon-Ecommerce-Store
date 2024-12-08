@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        tablet: { min: "768px", max: "1023px" }, // Custom screen size
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -19,6 +22,7 @@ export default {
         darkbackgroundColor: "#252B42",
         textgrayOne: "#FAFAFA",
         sucessColor: "#2DC071",
+        muttedColor: "#BDBDBD",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
