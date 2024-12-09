@@ -15,15 +15,15 @@ const EditorsPick = () => {
         </div>
 
         {/* Images Section */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-36">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-4 lg:ml-36">
           {/* First Column */}
           <div className="flex flex-col sm:flex-row gap-y-2 sm:gap-x-2 justify-center items-center relative">
-            <div className="relative w-full sm:w-auto h-[400px]">
+            <div className="relative w-[360px] sm:w-[700px] h-[500px] sm:h-[400px]">
               <Image
                 src="/images/productsimages/men.png"
                 alt="Men"
-                width={300}
-                height={300}
+                width={600}
+                height={500}
                 className="w-full h-full object-cover"
               />
               <button className="absolute bottom-4 left-4 sm:left-1/4 transform sm:-translate-x-1/2 bg-white text-black px-7 py-2 font-semibold text-xs sm:text-[0.8rem]">
@@ -31,7 +31,7 @@ const EditorsPick = () => {
               </button>
             </div>
 
-            <div className="relative w-full sm:w-auto h-[400px]">
+            <div className="relative w-[360px] sm:w-[500px] h-[700px] sm:h-[400px]">
               <Image
                 src="/images/productsimages/women.png"
                 alt="Women"
@@ -46,8 +46,8 @@ const EditorsPick = () => {
           </div>
 
           {/* Second Column */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-2 sm:gap-x-2 mt-2 justify-center items-center relative">
-            <div className="relative w-full sm:w-auto h-[200px]">
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-2 sm:gap-x-2 mt-2 justify-center items-center relative lg:mr-48">
+            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[200px]">
               <Image
                 src="/images/productsimages/kids.png"
                 alt="Kids"
@@ -60,7 +60,7 @@ const EditorsPick = () => {
               </button>
             </div>
 
-            <div className="relative w-full sm:w-auto h-[200px]">
+            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[190px]">
               <Image
                 src="/images/productsimages/acessories.png"
                 alt="Accessories"
