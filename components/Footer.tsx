@@ -13,7 +13,7 @@ const Footer = () => {
             <Link href="/">Bandage</Link>
           </div>
           {/* Social Media Icons */}
-          <div className="flex items-center space-x-4 mr-20">
+          <div className="flex items-center space-x-4 mr-0 sm:mr-20">
             <Image
               src="/images/icons/facebookfooter-icon.png"
               alt="Facebook-footer"

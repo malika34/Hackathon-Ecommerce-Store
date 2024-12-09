@@ -15,9 +15,9 @@ const EditorsPick = () => {
         </div>
 
         {/* Images Section */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-4 lg:ml-36">
+        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-4 lg:ml-36 space-y-5 sm:space-y-0">
           {/* First Column */}
-          <div className="flex flex-col sm:flex-row gap-y-2 sm:gap-x-2 justify-center items-center relative">
+          <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-2 justify-center items-center relative mt-1">
             <div className="relative w-[360px] sm:w-[700px] h-[500px] sm:h-[400px]">
               <Image
                 src="/images/productsimages/men.png"
@@ -46,8 +46,8 @@ const EditorsPick = () => {
           </div>
 
           {/* Second Column */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-2 sm:gap-x-2 mt-2 justify-center items-center relative lg:mr-48">
-            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[200px]">
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-4 sm:gap-x-2 mt-2 justify-center items-center relative lg:mr-48">
+            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[190px]">
               <Image
                 src="/images/productsimages/kids.png"
                 alt="Kids"
