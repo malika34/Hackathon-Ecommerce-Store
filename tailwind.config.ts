@@ -12,6 +12,7 @@ export default {
       screens: {
         tablet: { min: "768px", max: "1023px" }, // Custom screen size
       },
+
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -23,6 +24,12 @@ export default {
         textgrayOne: "#FAFAFA",
         sucessColor: "#2DC071",
         muttedColor: "#BDBDBD",
+        secondColorOne: "#23856D",
+        dangerColor: "#E74040",
+        disabledelementColor: "#8EC2F2",
+        outlineColor: "#E6E6E6",
+        lightbgColor: "#F9F9F9",
+        alertColor: "#E77C40",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

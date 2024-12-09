@@ -6,6 +6,8 @@ import { Montserrat } from "next/font/google";
 import TopHeader from "@/components/TopHeader";
 // Header component
 import Header from "@/components/Header";
+// Footer component
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,6 +42,7 @@ export default function RootLayout({
         <TopHeader />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

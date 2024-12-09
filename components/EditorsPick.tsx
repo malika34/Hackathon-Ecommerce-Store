@@ -17,27 +17,27 @@ const EditorsPick = () => {
         {/* Images Section */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-36">
           {/* First Column */}
-          <div className="flex flex-col sm:flex-row gap-y-6 sm:gap-x-4 justify-center items-center relative">
-            <div className="relative w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row gap-y-2 sm:gap-x-2 justify-center items-center relative">
+            <div className="relative w-full sm:w-auto h-[400px]">
               <Image
                 src="/images/productsimages/men.png"
                 alt="Men"
-                width={400}
-                height={400}
-                className="w-full h-auto"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
               />
               <button className="absolute bottom-4 left-4 sm:left-1/4 transform sm:-translate-x-1/2 bg-white text-black px-7 py-2 font-semibold text-xs sm:text-[0.8rem]">
                 MEN
               </button>
             </div>
 
-            <div className="relative w-full sm:w-auto">
+            <div className="relative w-full sm:w-auto h-[400px]">
               <Image
                 src="/images/productsimages/women.png"
                 alt="Women"
-                width={350}
-                height={350}
-                className="w-full h-auto"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
               />
               <button className="absolute bottom-4 left-4 sm:left-1/2 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
                 WOMEN
@@ -46,27 +46,27 @@ const EditorsPick = () => {
           </div>
 
           {/* Second Column */}
-          <div className="flex flex-col sm:flex-row md:flex-row lg:flex-col gap-4 gap-y-6 sm:gap-y-2 mt-2 justify-center items-center relative">
-            <div className="relative w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-2 sm:gap-x-2 mt-2 justify-center items-center relative">
+            <div className="relative w-full sm:w-auto h-[200px]">
               <Image
                 src="/images/productsimages/kids.png"
                 alt="Kids"
-                width={250}
-                height={250}
-                className="w-full h-auto"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
               />
               <button className="absolute bottom-4 left-4 sm:left-1/2 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
                 ACCESSORIES
               </button>
             </div>
 
-            <div className="relative w-full sm:w-auto">
+            <div className="relative w-full sm:w-auto h-[200px]">
               <Image
                 src="/images/productsimages/acessories.png"
                 alt="Accessories"
-                width={200}
-                height={200}
-                className="w-full h-auto"
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
               />
               <button className="absolute bottom-4 left-4 sm:left-1/3 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
                 KIDS
