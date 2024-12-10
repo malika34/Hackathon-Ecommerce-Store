@@ -1,5 +1,7 @@
-import MobileNavOne from "@/components/MobileNavOne";
-import React from "react";
+import TopHeader from "@/components/TopHeader";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import MobileNavTwo from "@/components/MobileNavTwo";
 import Hero from "@/components/Hero";
 import EditorsPick from "@/components/EditorsPick";
 import FeaturedProducts from "@/components/FeaturedProducts";
@@ -9,13 +11,16 @@ import FeaturedPosts from "@/components/FeaturedPosts";
 const Homepage = () => {
   return (
     <section>
-      <MobileNavOne />
+      <TopHeader />
+      <Header />
+      <MobileNavTwo />
       <Hero />
       <EditorsPick />
       <FeaturedProducts />
       <Vitaclassicproduct />
       <Neuraluniverse />
       <FeaturedPosts />
+      <Footer />
     </section>
   );
 };

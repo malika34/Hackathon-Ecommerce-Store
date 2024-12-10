@@ -6,7 +6,7 @@ const Nav = () => {
     <header className="w-full h-auto mt-2 ml-auto md:-ml-3 xl:-ml-10">
       <div className="container mx-auto hidden sm:flex justify-around items-center">
         {/* Logo */}
-        <div className="font-bold text-[1rem] xl:text-[1.3rem]">
+        <div className="font-bold text-[1rem] xl:text-[1.3rem] text-darkbackgroundColor">
           <Link href="/">Bandage</Link>
         </div>
 

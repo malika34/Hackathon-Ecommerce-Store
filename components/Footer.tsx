@@ -2,11 +2,19 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const Footer = () => {
+interface FooterProps {
+  topBgColor?: string;
+  bottomBgColor?: string;
+}
+
+const Footer: React.FC<FooterProps> = ({
+  topBgColor = "bg-textgrayOne",
+  bottomBgColor = "bg-darkgray",
+}) => {
   return (
     <footer className="mt-24">
       {/* Top Section: Logo and Social Media Icons */}
-      <div className="bg-textgrayOne py-11">
+      <div className={`${topBgColor} h-[7.9rem] py-11`}>
         <div className="container mx-auto px-36 flex flex-col lg:flex-row justify-between items-center">
           {/* Brand Section */}
           <div className="font-bold text-[1.4rem] mb-4 lg:mb-0 text-darkbackgroundColor">
@@ -36,6 +44,9 @@ const Footer = () => {
               className="w-4 h-4"
             />
           </div>
+        </div>
+        <div className="w-[80vw] pt-11 pl-7 pr-14 mx-auto">
+          <hr />
         </div>
       </div>
 
@@ -116,13 +127,13 @@ const Footer = () => {
             <div>
               <h3 className="font-bold mb-4 text-textColor">Get In Touch</h3>
               <form className="flex flex-col space-y-3">
-                <div className="flex">
+                <div className="flex flex-row md:flex-col xl:flex-row">
                   <input
                     type="email"
                     placeholder="Your Email"
                     className="border border-outlineColor text-[0.875rem] pl-5 text-left rounded-md p-1 bg-lightbgColor"
                   />
-                  <button className="bg-blue-500 text-white rounded-md px-2 py-4">
+                  <button className="bg-primaryColor text-white rounded-md px-2 py-4">
                     Subscribe
                   </button>
                 </div>
@@ -135,8 +146,8 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom Section*/}
-      <div className="bg-textgrayOne py-6">
+      {/* Bottom Section */}
+      <div className={`${bottomBgColor} py-6`}>
         <div className="container mx-auto text-center sm:text-left">
           <p className="text-secondtextColor text-sm mx-[5.8rem] sm:mx-36">
             Made With Love By Finland All Right Reserved

@@ -17,6 +17,7 @@ export default {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primaryColor: "#23A6F0",
+        secondarycolorOne: "#23856D",
         lighttextColor: "#FFFFFF",
         secondtextColor: "#737373",
         textColor: "#252B42",
@@ -30,6 +31,9 @@ export default {
         outlineColor: "#E6E6E6",
         lightbgColor: "#F9F9F9",
         alertColor: "#E77C40",
+        borderColor: "#ECECEC",
+        borderLine: "#E8E8E8",
+        paginationBg: "#F3F3F3",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",

@@ -3,12 +3,15 @@ import Image from "next/image";
 const EditorsPick = () => {
   return (
     <section className="flex justify-center items-center bg-textgrayOne mb-16">
+      {/* Container for the Editor's Pick section */}
       <div className="w-full max-w-5xl px-4 mt-16 mx-auto container">
         {/* Title Section */}
         <div className="space-y-2 text-center">
+          {/* Heading */}
           <h3 className="text-textColor font-semibold text-[1.6rem]">
             EDITOR'S PICK
           </h3>
+          {/* Subtitle */}
           <p className="text-secondtextColor text-[0.875rem] mx-16 sm:mx-auto">
             Problems trying to resolve the conflict between
           </p>
@@ -16,9 +19,10 @@ const EditorsPick = () => {
 
         {/* Images Section */}
         <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-4 lg:ml-36 space-y-5 sm:space-y-0">
-          {/* First Column */}
+          {/* First Column: Men and Women Categories */}
           <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-2 justify-center items-center relative mt-1">
-            <div className="relative w-[360px] sm:w-[700px] h-[500px] sm:h-[400px]">
+            {/* Men Image Card */}
+            <div className="relative w-[300px] sm:w-[700px] h-[500px] sm:h-[400px]">
               <Image
                 src="/images/productsimages/men.png"
                 alt="Men"
@@ -31,7 +35,8 @@ const EditorsPick = () => {
               </button>
             </div>
 
-            <div className="relative w-[360px] sm:w-[500px] h-[700px] sm:h-[400px]">
+            {/* Women Image Card */}
+            <div className="relative w-[300px] sm:w-[500px] h-[700px] sm:h-[400px]">
               <Image
                 src="/images/productsimages/women.png"
                 alt="Women"
@@ -45,9 +50,10 @@ const EditorsPick = () => {
             </div>
           </div>
 
-          {/* Second Column */}
+          {/* Second Column: Kids and Accessories Categories */}
           <div className="flex flex-col sm:flex-row lg:flex-col gap-y-4 sm:gap-x-2 mt-2 justify-center items-center relative lg:mr-48">
-            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[190px]">
+            {/* Kids Image Card */}
+            <div className="relative w-[300px] sm:w-[200px] h-[300px] sm:h-[190px]">
               <Image
                 src="/images/productsimages/kids.png"
                 alt="Kids"
@@ -60,7 +66,8 @@ const EditorsPick = () => {
               </button>
             </div>
 
-            <div className="relative w-[360px] sm:w-[200px] h-[300px] sm:h-[190px]">
+            {/* Accessories Image Card */}
+            <div className="relative w-[300px] sm:w-[200px] h-[300px] sm:h-[190px]">
               <Image
                 src="/images/productsimages/acessories.png"
                 alt="Accessories"
