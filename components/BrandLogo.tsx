@@ -4,7 +4,7 @@ import React from "react";
 const BrandLogo = () => {
   return (
     // Main section for the brand logos
-    <section className="bg-lightbgColor h-[40rem] sm:h-[10rem] mt-12 sm:mt-3 -mb-20">
+    <section className="bg-lightbgColor h-[40rem] sm:h-[8rem] mt-12 sm:mt-3 -mb-20">
       {/* Container to center and constrain the content */}
       <div className="container mx-auto">
         {/* Flex container for logos with responsive spacing and alignment */}

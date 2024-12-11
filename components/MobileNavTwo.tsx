@@ -27,6 +27,7 @@ const MobileNavTwo = () => {
             {[
               { label: "Home", href: "/" },
               { label: "Shop", href: "/shop", hasDropdown: false },
+              { label: "Product", href: "/product" },
               { label: "About", href: "/about" },
               { label: "Blog", href: "/blog" },
               { label: "Contact", href: "/contact" },

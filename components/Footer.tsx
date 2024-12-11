@@ -15,7 +15,7 @@ const Footer: React.FC<FooterProps> = ({
     <footer className="mt-24">
       {/* Top Section: Logo and Social Media Icons */}
       <div className={`${topBgColor} h-[7.9rem] py-11`}>
-        <div className="container mx-auto px-36 flex flex-col lg:flex-row justify-between items-center">
+        <div className="container mx-auto px-4 sm:px-36 flex flex-col sm:flex-row justify-between items-start sm:items-center">
           {/* Brand Section */}
           <div className="font-bold text-[1.4rem] mb-4 lg:mb-0 text-darkbackgroundColor">
             <Link href="/">Bandage</Link>
@@ -46,7 +46,7 @@ const Footer: React.FC<FooterProps> = ({
           </div>
         </div>
         <div className="w-[80vw] pt-11 pl-7 pr-14 mx-auto">
-          <hr />
+          <hr className="hidden sm:flex" />
         </div>
       </div>
 

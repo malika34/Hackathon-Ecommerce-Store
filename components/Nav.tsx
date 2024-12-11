@@ -16,6 +16,7 @@ const Nav = () => {
             {[
               { label: "Home", href: "/" },
               { label: "Shop", href: "/shop", hasDropdown: true },
+              { label: "Product", href: "/product" },
               { label: "About", href: "/about" },
               { label: "Blog", href: "/blog" },
               { label: "Contact", href: "/contact" },

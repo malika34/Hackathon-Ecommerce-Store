@@ -33,6 +33,7 @@ export default {
         alertColor: "#E77C40",
         borderColor: "#ECECEC",
         borderLine: "#E8E8E8",
+        thirdtextColor: "#858585",
         paginationBg: "#F3F3F3",
         card: {
           DEFAULT: "hsl(var(--card))",
