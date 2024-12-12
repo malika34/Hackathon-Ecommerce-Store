@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const MobileNavOne = () => {
   return (
-    <header className="w-full h-auto mt-6">
+    <header className="w-full h-auto -mt-3 pt-6 bg-textgrayOne sm:bg-white">
       <div className="container mx-auto sm:hidden justify-around items-center">
         <div className="flex items-center space-x-44 justify-center">
           {/* Logo */}

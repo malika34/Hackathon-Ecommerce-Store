@@ -158,8 +158,10 @@ const Productcard = () => {
                 <div className="flex items-center mt-7 space-x-2">
                   <Button
                     text="Select Options"
-                    paddingX="0.8rem"
-                    paddingY="0.6rem"
+                    paddingY="10px"
+                    paddingL="20px"
+                    paddingR="20px"
+                    rounded="rounded-sm"
                   />
                   {/* Wishlist button */}
                   <div className="border border-borderColor rounded-full py-2 px-2 w-[2rem]">
