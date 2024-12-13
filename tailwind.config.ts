@@ -32,6 +32,7 @@ export default {
         lightbgColor: "#F9F9F9",
         alertColor: "#E77C40",
         borderColor: "#ECECEC",
+        hoverColor: "#2A7CC7",
         borderLine: "#E8E8E8",
         thirdtextColor: "#858585",
         paginationBg: "#F3F3F3",
