@@ -8,7 +8,7 @@ const BrandLogo = () => {
       {/* Container to center and constrain the content */}
       <div className="container mx-auto">
         {/* Flex container for logos with responsive spacing and alignment */}
-        <div className="flex flex-col sm:flex-row gap-x-[6.5rem] items-center justify-center pt-10 sm:pt- space-y-7 sm:space-y-0">
+        <div className="flex flex-col sm:flex-row gap-x-[2rem] md:gap-x-[2rem] lg:gap-x-[4.5rem] xl:gap-x-[6.5rem] 2xl:gap-x-[7.5rem] items-center justify-center pt-10 sm:pt- space-y-7 sm:space-y-0">
           {/* Individual brand logo 1 */}
           <Image
             src={"/images/brandlogos/brand-logo-one.png"}

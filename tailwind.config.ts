@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       screens: {
-        tablet: { min: "768px", max: "1023px" }, // Custom screen size
+        "custom-lg": { min: "1280px", max: "1535px" }, // Custom screen range
       },
 
       colors: {
@@ -36,6 +36,9 @@ export default {
         borderLine: "#E8E8E8",
         thirdtextColor: "#858585",
         paginationBg: "#F3F3F3",
+        fadedPrimaryColor: "#B2E3FF",
+        roundedOutline: "#D0D0D0",
+        roundedBg: "#EBEBEB",
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
