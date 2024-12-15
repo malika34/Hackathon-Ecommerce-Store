@@ -2,6 +2,8 @@
 import Image from "next/image";
 import { useState } from "react";
 import PricingCards from "./PricingCards";
+import BrandLogo from "./BrandLogo";
+import Button from "./button";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -16,7 +18,7 @@ const Pricing = () => {
             PRICING
           </p>
           {/* Heading */}
-          <h3 className="text-textColor font-semibold text-[3.2rem]">
+          <h3 className="text-textColor font-semibold text-[3rem] sm:text-[3.2rem]">
             Simple Pricing
           </h3>
           {/* Breadcrumb navigation */}
@@ -35,7 +37,7 @@ const Pricing = () => {
         </div>
       </div>
       {/* Pricing Section */}
-      <div className="bg-textgrayOne mt-11 pt-16">
+      <div className="bg-textgrayOne mt-11 pt-16 pb-40">
         <div className="space-y-2 text-center">
           {/* Heading */}
           <h3 className="text-textColor font-semibold text-[2.3rem]">
@@ -89,6 +91,180 @@ const Pricing = () => {
         <div>
           <PricingCards />
         </div>
+        <div className="text-textColor text-center text-[1rem] mt-32">
+          <p className="mx-24 sm:mx-auto pb-4">
+            Trusted By Over 4000 Big Companies
+          </p>
+          <div className="-mt-9">
+            <BrandLogo />
+          </div>
+        </div>
+      </div>
+      {/* Pricing FAQS */}
+      <div className="mt-20">
+        <div className="space-y-2 text-center">
+          {/* Heading */}
+          <h3 className="text-textColor font-semibold text-[2.3rem]">
+            Pricing FAQs
+          </h3>
+          <p className="hidden sm:flex text-secondtextColor justify-center text-[0.875rem]">
+            Problems trying to resolve the conflict between <br />
+            the two major realms of Classical physics
+          </p>
+          <p className="flex sm:hidden text-secondtextColor  text-[0.875rem] mx-[3.4rem] sm:mx-auto">
+            We focus on ergonomics and meeting you where you work. It's only a
+            keystroke away.
+          </p>
+        </div>
+        {/* Quick Fox Jumps Section */}
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-2 place-content-center place-items-center px-6 md:px-20 lg:px-40 mt-16">
+          {/* First Jump Section */}
+          <div>
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                Work better together
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[25rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+
+          {/* Second Jump Section */}
+          <div>
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                OpenType features and Variable fonts
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[28rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1 ">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+
+          {/* Third Jump Section */}
+          <div className="ml-3 sm:ml-0">
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                Start working faster today
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[25rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1 ">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+
+          {/* Fourth Jump Section */}
+          <div className="ml-3 sm:ml-0">
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                Work at the speed of thought.
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[28rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1 ">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+
+          {/* Fifth Jump Section */}
+          <div className="ml-3 sm:ml-0">
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                The Fastest way to organize
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[25rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1 ">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+
+          {/* Sixth Jump Section */}
+          <div className="ml-3 sm:ml-0">
+            <div className="flex space-x-3">
+              <Image
+                src={"/images/icons/rightarrow-icon.png"}
+                width={9}
+                height={16}
+                alt="Rightarrow-icon"
+                className="w-[0.7rem] h-[0.7rem] hidden sm:block"
+              />
+              <h4 className="flex sm:hidden text-[1rem] font-semibold text-textColor">
+                The Fastest way to navigate
+              </h4>
+              <h4 className="hidden sm:flex text-[1rem] font-semibold text-textColor">
+                the quick fox jumps over the lazy dog
+              </h4>
+            </div>
+            <p className="text-secondtextColor text-[0.875rem] max-w-[20rem] sm:max-w-[25rem] md:max-w-[28rem] pl-3 sm:pl-5 pb-16 pt-9 sm:pt-1 ">
+              Met minim Mollie non desert Alamo est sit cliquey dolor do met
+              sent. RELIT official consequent door ENIM RELIT Mollie. Excitation
+              venial consequent sent nostrum met.
+            </p>
+          </div>
+        </div>
+        <p className="text-center text-[1rem] text-secondtextColor mx-14">
+          Haven’t got your answer? Contact our support
+        </p>
       </div>
     </section>
   );
