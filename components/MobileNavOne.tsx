@@ -40,6 +40,7 @@ const MobileNavOne = () => {
               { label: "Home", href: "/" },
               { label: "Product", href: "/product", hasDropdown: false },
               { label: "Pricing", href: "/pricing" },
+              { label: "Team", href: "/team" },
               { label: "Contact", href: "/contact" },
             ].map((item, index) => (
               <li

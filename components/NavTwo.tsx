@@ -18,6 +18,7 @@ const NavTwo = () => {
               { label: "Home", href: "/" },
               { label: "Product", href: "/product" },
               { label: "Pricing", href: "/pricing" },
+              { label: "Team", href: "/team" },
               { label: "Contact", href: "/contact" },
             ].map((item, index) => (
               <li key={index}>
