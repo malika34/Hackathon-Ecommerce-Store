@@ -5,7 +5,7 @@ import Image from "next/image";
 const NavTwo = () => {
   return (
     <header className="w-full h-auto mt-3 ml-auto md:-ml-3 xl:-ml-10">
-      <div className="container mx-auto hidden sm:flex justify-around items-center px-0 md:px-[0rem] lg:px-[5rem] xl:px-[8rem] lg:gap-x-36 ">
+      <div className="container mx-auto hidden sm:flex justify-around items-center px-0 md:px-[0rem] lg:px-[5rem] xl:px-[8rem] lg:gap-x-28 ">
         {/* Logo */}
         <div className="font-bold text-[1rem] xl:text-[1.3rem] text-darkbackgroundColor self-center pl-6 xl:pl-6 2xl:pl-14">
           <Link href="/">Bandage</Link>

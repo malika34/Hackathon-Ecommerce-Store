@@ -7,6 +7,8 @@ interface ButtonProps {
   paddingR: string;
   rounded: string;
   backgroundColor?: string; // Optional backgroundColor prop
+  textColor?: string; // Optional textColor prop
+  borderColor?: string; // Optional borderColor prop
   outline?: boolean; // Optional outline prop
 }
 
@@ -17,13 +19,15 @@ const Button: React.FC<ButtonProps> = ({
   paddingR,
   rounded,
   backgroundColor = "bg-primaryColor",
+  textColor = "text-white", // Default text color
+  borderColor = "border-primaryColor", // Default border color
   outline = false, // Default no outline
 }) => {
   return (
     <div>
       <button
-        className={`text-white font-semibold text-sm ${rounded} ${backgroundColor} ${
-          outline ? "border-[0.1rem] border-textgrayOne" : ""
+        className={`${textColor} font-semibold text-sm ${rounded} ${backgroundColor} ${borderColor} ${
+          outline ? "border-[0.1rem]" : "border"
         }`}
         style={{
           paddingTop: paddingY,

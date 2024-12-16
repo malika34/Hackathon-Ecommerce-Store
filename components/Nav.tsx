@@ -16,11 +16,10 @@ const Nav = () => {
             {[
               { label: "Home", href: "/" },
               { label: "Shop", href: "/shop", hasDropdown: true },
-              { label: "Product", href: "/product" },
               { label: "About", href: "/about" },
-              { label: "Blog", href: "/blog" },
+              { label: "Blog", href: "/" },
               { label: "Contact", href: "/contact" },
-              { label: "Pages", href: "/Pages" },
+              { label: "Pages", href: "/" },
             ].map((item, index) => (
               <li
                 key={index}
