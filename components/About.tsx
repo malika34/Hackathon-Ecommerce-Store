@@ -119,13 +119,17 @@ const About = () => {
             className="w-20 h-20 rounded-full bg-primaryColor flex items-center justify-center shadow-md hover:scale-105 transition-transform absolute top-[9rem] md:top-[10.5rem] lg:top-[12rem] xl:top-[13rem] 2xl:top-[16rem] left-[17rem] md:left-[20rem] lg:left-[22rem] xl:left-[26rem] 2xl:left-[32rem]"
             aria-label="Play Video"
           >
-            <Image
-              src={"/images/icons/playButton.png"}
-              alt="playButton"
-              width={19}
-              height={22}
-              className="w-4 h-w-4"
-            />
+            {/* SVG Play Button */}
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-7 h-7 text-white"
+            >
+              <path d="M8 5V19L19 12L8 5Z" />
+            </svg>
           </button>
         </div>
       </div>
