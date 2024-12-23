@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const EditorsPick = () => {
   return (
-    <section className="flex justify-center items-center bg-textgrayOne mb-16">
+    <section className="flex justify-center items-center bg-textgrayOne mb-16 pb-14">
       {/* Container for the Editor's Pick section */}
       <div className="w-full max-w-5xl px-4 mt-16 mx-auto container">
         {/* Title Section */}

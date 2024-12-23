@@ -10,7 +10,12 @@ const Pricingpage = () => {
   return (
     <div>
       <NavTwo />
-      <MobileNavOne />
+      <MobileNavOne
+        bgColorHidden="bg-white"
+        bgColorVisible="bg-mobnavBg"
+        paddingBottomVisible="4rem"
+        marginBottomHidden="0rem"
+      />
       <Pricing />
       <Trail />
       <Footer topBgColor="bg-text-white" />

@@ -3,7 +3,7 @@ import Button from "./button";
 
 const About = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto -mt-14 sm:mt-auto">
       {/* For Medium Screens (md) */}
       <div className="hidden sm:flex justify-center md:justify-around px-6 md:px-0 lg:px-0">
         {/* Text Content for Medium Screens */}

@@ -10,7 +10,12 @@ const Aboutpage = () => {
   return (
     <div>
       <NavTwo />
-      <MobileNavOne />
+      <MobileNavOne
+        bgColorVisible="bg-mobnavBg"
+        bgColorHidden="bg-white"
+        paddingBottomVisible="4rem"
+        marginBottomHidden="0rem"
+      />
       <About />
       <Team />
       <BigCompanies />

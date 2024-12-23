@@ -22,6 +22,7 @@ export default {
         secondtextColor: "#737373",
         textColor: "#252B42",
         darkbackgroundColor: "#252B42",
+        mobnavBg: "#F6F6F6",
         textgrayOne: "#FAFAFA",
         sucessColor: "#2DC071",
         muttedColor: "#BDBDBD",

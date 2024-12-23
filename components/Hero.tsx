@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto">
+    <section className="container mx-auto -mt-0 sm:mt-4">
       {/* Hero Section for Desktop View */}
       <div className="relative bg-[url('/images/bgimages/hero-bg.jpg')] bg-cover bg-top h-[39rem] hidden sm:flex items-center -mt-4 px-6 md:px-12 lg:px-40">
         {/* Content container for desktop */}

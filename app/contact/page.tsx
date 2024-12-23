@@ -7,7 +7,12 @@ const Contactpage = () => {
   return (
     <div>
       <NavTwo />
-      <MobileNavOne />
+      <MobileNavOne
+        bgColorHidden="bg-white"
+        bgColorVisible="bg-mobnavBg"
+        paddingBottomVisible="4rem"
+        marginBottomHidden="0rem"
+      />
       <Contact />
       <Footer topBgColor="bg-white" />
     </div>
