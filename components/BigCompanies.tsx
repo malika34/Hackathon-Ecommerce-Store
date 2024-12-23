@@ -5,7 +5,7 @@ import Button from "./button";
 const BigCompanies = () => {
   return (
     <section className="bg-textgrayOne w-full">
-      <div className="container mx-auto mt-20 md:mt-40">
+      <div className="container mx-auto mt-20 md:mt-40 pt-[3.5rem]">
         {/* Text Section */}
         <div className="flex flex-col justify-center items-center text-center px-6 md:mx-[4.7rem] space-y-2">
           <h3 className="font-semibold text-[2.3rem] text-textColor">

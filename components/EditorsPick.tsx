@@ -18,64 +18,54 @@ const EditorsPick = () => {
         </div>
 
         {/* Images Section */}
-        <div className="flex flex-col lg:grid lg:grid-cols-2 gap-4 mt-10 px-8 md:px-16 lg:px-4 lg:ml-36 space-y-5 sm:space-y-0">
-          {/* First Column: Men and Women Categories */}
-          <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-x-2 justify-center items-center relative mt-1">
-            {/* Men Image Card */}
-            <div className="relative w-[300px] sm:w-[700px] h-[500px] sm:h-[400px]">
-              <Image
-                src="/images/productsimages/men.png"
-                alt="Men"
-                width={600}
-                height={500}
-                className="w-full h-full object-cover"
-              />
-              <button className="absolute bottom-4 left-4 sm:left-1/4 transform sm:-translate-x-1/2 bg-white text-black px-7 py-2 font-semibold text-xs sm:text-[0.8rem]">
-                MEN
-              </button>
-            </div>
-
-            {/* Women Image Card */}
-            <div className="relative w-[300px] sm:w-[500px] h-[700px] sm:h-[400px]">
-              <Image
-                src="/images/productsimages/women.png"
-                alt="Women"
-                width={300}
-                height={300}
-                className="w-full h-full object-cover"
-              />
-              <button className="absolute bottom-4 left-4 sm:left-1/2 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
-                WOMEN
-              </button>
-            </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-10 px-8 md:px-16 lg:px-4">
+          {/* First Column: Men */}
+          <div className="relative w-full lg:col-span-2 h-[500px]">
+            <Image
+              src="/images/productsimages/men.png"
+              alt="Men"
+              layout="fill"
+              className="object-cover"
+            />
+            <button className="absolute bottom-4 left-4 bg-white text-black px-14 py-[0.7rem] font-semibold text-xs sm:text-[0.8rem]">
+              MEN
+            </button>
           </div>
 
-          {/* Second Column: Kids and Accessories Categories */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-y-4 sm:gap-x-2 mt-2 justify-center items-center relative lg:mr-48">
-            {/* Kids Image Card */}
-            <div className="relative w-[300px] sm:w-[200px] h-[300px] sm:h-[190px]">
+          {/* Second Column: Women */}
+          <div className="relative w-full h-[500px] lg:h-auto">
+            <Image
+              src="/images/productsimages/women.png"
+              alt="Women"
+              layout="fill"
+              className="object-cover"
+            />
+            <button className="absolute bottom-4 left-4 bg-white text-black px-6 py-[0.7rem] font-semibold text-xs sm:text-[0.8rem]">
+              WOMEN
+            </button>
+          </div>
+
+          {/* Third Column: Kids and Accessories */}
+          <div className="flex flex-col gap-4">
+            <div className="relative w-full h-[240px]">
               <Image
                 src="/images/productsimages/kids.png"
                 alt="Kids"
-                width={300}
-                height={300}
-                className="w-full h-full object-cover"
+                layout="fill"
+                className="object-cover"
               />
-              <button className="absolute bottom-4 left-4 sm:left-1/2 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
+              <button className="absolute bottom-4 left-4 bg-white text-black px-4 py-[0.7rem] font-semibold text-xs sm:text-[0.8rem]">
                 ACCESSORIES
               </button>
             </div>
-
-            {/* Accessories Image Card */}
-            <div className="relative w-[300px] sm:w-[200px] h-[300px] sm:h-[190px]">
+            <div className="relative w-full h-[240px]">
               <Image
                 src="/images/productsimages/acessories.png"
                 alt="Accessories"
-                width={300}
-                height={300}
-                className="w-full h-full object-cover"
+                layout="fill"
+                className="object-cover"
               />
-              <button className="absolute bottom-4 left-4 sm:left-1/3 transform sm:-translate-x-1/2 bg-white text-black px-4 py-2 font-semibold text-xs sm:text-[0.8rem]">
+              <button className="absolute bottom-4 left-4 bg-white text-black px-7 py-[0.6rem] font-semibold text-xs sm:text-[0.8rem]">
                 KIDS
               </button>
             </div>
