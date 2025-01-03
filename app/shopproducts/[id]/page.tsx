@@ -56,7 +56,7 @@ const ProductDetails = ({ params }: { params: Promise<{ id: string }> }) => {
   };
   useEffect(() => {
     const fetchProducts = async () => {
-      const response = await fetch("/api/productsone");
+      const response = await fetch("/api/productstwo");
       const data = await response.json();
       setProducts(data);
     };
@@ -73,7 +73,7 @@ const ProductDetails = ({ params }: { params: Promise<{ id: string }> }) => {
   useEffect(() => {
     if (paramId) {
       // Fetch the specific product using the dynamic ID
-      fetch(`/api/homeproductdetails`)
+      fetch(`/api/shopproductdetails`)
         .then((res) => res.json())
         .then((data) => {
           const foundProduct = data.find(
@@ -113,7 +113,7 @@ const ProductDetails = ({ params }: { params: Promise<{ id: string }> }) => {
       <Nav />
       <MobileNavTwo />
       {/* <Productcard /> */}
-      <div className="w-full bg-textgrayOne mt-3 h-[70rem] sm:h-[45rem] md:h-[36rem]">
+      <div className="w-full bg-textgrayOne mt-3 h-[61rem] sm:h-[45rem] md:h-[36rem]">
         {/* Breadcrumb navigation for user orientation */}
         <div className="container mx-auto">
           <div className="flex justify-center sm:justify-normal items-center font-semibold text-sm space-x-3 ml-[0rem] md:ml-[1rem] lg:ml-[3.5rem] xl:ml-[5.5rem] 2xl:ml-[8.5rem] mb-2 pt-7 pb-6">
