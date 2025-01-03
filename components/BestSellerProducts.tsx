@@ -1,74 +1,27 @@
+"use client";
 import Image from "next/image";
 import BrandLogo from "@/components/BrandLogo";
+import React, { useEffect, useState } from "react";
+interface Product {
+  id: number;
+  image: string;
+  name: string;
+  department: string;
+  price: string;
+  pricetwo: string;
+}
 
 const BestSellerProducts = () => {
-  // Define product data with individual colors
-  const products = [
-    {
-      id: 1,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-1.png",
-    },
-    {
-      id: 2,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-2.png",
-    },
-    {
-      id: 3,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-3.png",
-    },
-    {
-      id: 4,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-4.png",
-    },
-    {
-      id: 5,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-5.png",
-    },
-    {
-      id: 6,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-6.png",
-    },
-    {
-      id: 7,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-7.png",
-    },
-    {
-      id: 8,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      pricetwo: "$6.48",
-      image: "/images/productsimages/bestseller-product-8.png",
-    },
-  ];
+  const [products, setProducts] = useState<Product[]>([]);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch("/api/products");
+      const data = await response.json();
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <section className="w-full bg-textgrayOne h-auto mt-8">

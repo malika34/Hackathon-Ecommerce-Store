@@ -1,130 +1,56 @@
+"use client";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
+import { useCart } from "@/components/CartContext"; // Import the useCart hook
+
+interface Product {
+  id: number;
+  image: string;
+  name: string;
+  department: string;
+  price: string;
+  colors: { name: string; colorClass: string }[];
+}
 
 const FeaturedProducts = () => {
-  // Define product data with individual colors
-  const products = [
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 1,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-1.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 2,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-2.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 3,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-3.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 4,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-4.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 5,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-5.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 6,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-6.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 7,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-7.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    {
-      // Each product has unique attributes: id, name, department, price, image, and colors
-      id: 8,
-      name: "Graphic Design",
-      department: "English Department",
-      price: "$16.48",
-      image: "/images/productsimages/product-8.png",
-      colors: [
-        // Array of color options with a name and CSS class
-        { name: "Sky Blue", colorClass: "bg-primaryColor" },
-        { name: "Green", colorClass: "bg-secondColorOne" },
-        { name: "Orange", colorClass: "bg-alertColor" },
-        { name: "Sky Blue", colorClass: "bg-textColor" },
-      ],
-    },
-    // Additional product objects follow the same structure
-  ];
+  const { addToCart, toggleCart } = useCart(); // Destructure addToCart function from the context
+  const [products, setProducts] = useState<Product[]>([]);
+  const [selectedColors, setSelectedColors] = useState<{
+    [key: number]: string;
+  }>({});
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await fetch("/api/homeproducts");
+      const data = await response.json();
+      setProducts(data);
+    };
+
+    fetchProducts();
+  }, []);
+  const handleColorSelect = (productId: number, colorName: string) => {
+    setSelectedColors((prev) => ({
+      ...prev,
+      [productId]: colorName,
+    }));
+  };
+
+  const handleAddToCart = (product: Product) => {
+    const selectedColor =
+      selectedColors[product.id] || product.colors[0]?.name || "Default Color";
+    // When the user clicks the "Add to Cart" button, call the addToCart function
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      quantity: 1, // Default quantity is 1
+      image: product.image, // Include the image property
+      colors: product.colors,
+      color: selectedColor, // Include the selected color
+      selectedColor: selectedColor,
+    });
+  };
 
   return (
     <section className="w-full h-auto">
@@ -148,7 +74,7 @@ const FeaturedProducts = () => {
             // Each product card
             <div
               key={product.id}
-              className="flex flex-col items-center space-y-4"
+              className="flex flex-col items-center space-y-4 relative before:hidden after:hidden group"
             >
               {/* Product Image */}
               <Image
@@ -156,8 +82,36 @@ const FeaturedProducts = () => {
                 width={239}
                 height={437}
                 alt={product.name}
-                className="w-80"
+                className="w-80 cursor-pointer"
               />
+              <div className="absolute top-60 sm:top-52 lg:top-28 xl:top-40 2xl:top-52 flex space-x-3 items-center justify-center">
+                {/* Add to cart button */}
+                <div
+                  className="border border-textColor rounded-full py-4 px-4 hidden group-hover:block cursor-pointer"
+                  onClick={() => handleAddToCart(product)} // Add product to cart when clicked
+                >
+                  <Image
+                    src={"/images/icons/cart-two-icon.png"}
+                    width={20}
+                    height={20}
+                    alt="cart-two-icon"
+                    className="w-[1.5rem] sm:w-[1rem] hidden group-hover:block"
+                  />
+                </div>
+                {/* Watchlist button */}
+                <Link href={`/homeproducts/${product.id}`}>
+                  <div className="border border-textColor rounded-full py-4 px-4 hidden group-hover:block cursor-pointer hover">
+                    <Image
+                      src={"/images/icons/watch-icon.png"}
+                      width={20}
+                      height={20}
+                      alt="Watch-icon"
+                      className="w-[1.5rem] sm:w-[1rem] hidden group-hover:block"
+                    />
+                  </div>
+                </Link>
+              </div>
+
               {/* Product Name */}
               <p className="text-[1rem] font-semibold text-textColor">
                 {product.name}
@@ -174,11 +128,17 @@ const FeaturedProducts = () => {
               {/* Product Colors */}
               <div className="flex space-x-3 mt-2">
                 {product.colors.map((color, index) => (
-                  // Color indicator circles
                   <div
                     key={index}
                     title={color.name}
-                    className={`${color.colorClass} w-5 h-5 rounded-full cursor-pointer border-2 border-transparent hover:border-gray-400 transition`}
+                    className={`${
+                      color.colorClass
+                    } w-5 h-5 rounded-full cursor-pointer border-2 ${
+                      selectedColors[product.id] === color.name
+                        ? "border-gray-400"
+                        : "border-transparent"
+                    } hover:border-gray-400 transition`}
+                    onClick={() => handleColorSelect(product.id, color.name)}
                   ></div>
                 ))}
               </div>

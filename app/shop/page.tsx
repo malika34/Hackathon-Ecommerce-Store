@@ -22,7 +22,6 @@ const Shoppage = () => {
 
       {/* Products */}
       <Products />
-
       {/* For small screens: BrandLogo and Footer AFTER Products */}
       <div className="block sm:hidden">
         <BrandLogo />

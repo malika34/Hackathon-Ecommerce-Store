@@ -40,7 +40,7 @@ const NavTwo = () => {
               text="Become a member"
               paddingY="11px"
               paddingL="20px"
-              paddingR="40px"
+              paddingR="53px"
               rounded="rounded-tl-sm rounded-bl-sm"
             />
             <Image
