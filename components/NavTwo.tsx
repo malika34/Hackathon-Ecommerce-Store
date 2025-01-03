@@ -16,7 +16,7 @@ const NavTwo = () => {
           <ul className="flex items-center text-[0.700rem] xl:text-[0.875rem] gap-x-3 font-semibold text-secondtextColor ml-2 xl:-ml-40">
             {[
               { label: "Home", href: "/" },
-              { label: "Product", href: "/product" },
+              { label: "Product", href: "/" },
               { label: "Pricing", href: "/pricing" },
               { label: "Team", href: "/team" },
               { label: "Contact", href: "/contact" },

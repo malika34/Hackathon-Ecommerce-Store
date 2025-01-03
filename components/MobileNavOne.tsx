@@ -154,7 +154,7 @@ const MobileNavOne: React.FC<MobileNavOneProps> = ({
               {[
                 { label: "Home", href: "/" },
                 { label: "Shop", href: "shop" },
-                { label: "Product", href: "/product", hasDropdown: false },
+                { label: "Product", href: "/", hasDropdown: false },
                 { label: "Pricing", href: "/pricing" },
                 { label: "Team", href: "/team" },
                 { label: "Contact", href: "/contact" },

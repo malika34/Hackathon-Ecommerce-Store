@@ -113,7 +113,7 @@ const ProductDetails = ({ params }: { params: Promise<{ id: string }> }) => {
       <Nav />
       <MobileNavTwo />
       {/* <Productcard /> */}
-      <div className="w-full bg-textgrayOne mt-3 h-[62rem] sm:h-[45rem] md:h-[36rem]">
+      <div className="w-full bg-textgrayOne mt-3 h-[70rem] sm:h-[45rem] md:h-[36rem]">
         {/* Breadcrumb navigation for user orientation */}
         <div className="container mx-auto">
           <div className="flex justify-center sm:justify-normal items-center font-semibold text-sm space-x-3 ml-[0rem] md:ml-[1rem] lg:ml-[3.5rem] xl:ml-[5.5rem] 2xl:ml-[8.5rem] mb-2 pt-7 pb-6">

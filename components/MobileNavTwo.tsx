@@ -72,7 +72,7 @@ const MobileNavTwo: React.FC<MobileNavTwoProps> = ({
               {[
                 { label: "Home", href: "/" },
                 { label: "Shop", href: "/shop" },
-                { label: "Product", href: "/product" },
+                { label: "Product", href: "/" },
                 { label: "About", href: "/about" },
                 { label: "Blog", href: "/" },
                 { label: "Contact", href: "/contact" },
